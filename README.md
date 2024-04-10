@@ -43,7 +43,7 @@ Once the application is up and running, you can interact with the REST API using
 - **Create a new product:**
 
 ```bash
-curl -X POST http://localhost:8080/api/users -d '{"name": "Example", "email": "example@example.com", "password": "example123", "age": 24}'
+curl -X POST http://localhost:8080/api/users -d '{"name": "TV", "description": "samsung tv", "price": 1.234, "category": "technology", "stock": 23, "image": "tv.jpg"}'
 ```
 
 - **Read all products:**
@@ -61,7 +61,7 @@ curl -X GET http://localhost:8080/api/users/{id}
 - **Update product information:**
 
 ```bash
-curl -X PUT http://localhost:8080/api/users/{id} -d '{"name": "Example", "email": "example@example.com", "password": "example123", "age": 24}'
+curl -X PUT http://localhost:8080/api/users/{id} -d '{"name": "TV", "description": "samsung tv", "price": 1.234, "category": "technology", "stock": 23, "image": "tv.jpg"}'
 ```
 
 - **Delete a product:**
