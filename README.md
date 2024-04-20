@@ -20,7 +20,7 @@ This project is an API REST developed in the Go programming language, making use
 1.Clone the repository:
 
 ```bash
-git clone https://github.com/Mayer-04/fiber-authentication.git
+git clone https://github.com/Mayer-04/mongo-api-go.git
 ```
 
 2.Install project dependencies:
