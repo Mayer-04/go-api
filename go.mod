@@ -5,7 +5,7 @@ go 1.22.2
 require (
 	github.com/go-playground/validator/v10 v10.19.0
 	github.com/joho/godotenv v1.5.1
-	go.mongodb.org/mongo-driver v1.14.0
+	go.mongodb.org/mongo-driver v1.15.0
 )
 
 require (
