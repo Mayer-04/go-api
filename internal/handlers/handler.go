@@ -1,4 +1,4 @@
-package handler
+package handlers
 
 import (
 	"context"
@@ -54,9 +54,7 @@ func GetProducts(w http.ResponseWriter, r *http.Request) {
 		log.Fatal(err)
 	}
 
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusOK)
-	json.NewEncoder(w).Encode(products)
+	writeJSON(w, http.StatusOK, products)
 
 }
 
@@ -87,9 +85,7 @@ func GetproductById(w http.ResponseWriter, r *http.Request) {
 		log.Fatal(err)
 	}
 
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusOK)
-	w.Write(res)
+	writeJSON(w, http.StatusCreated, res)
 
 }
 
@@ -114,9 +110,7 @@ func CreateProduct(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusCreated)
-	json.NewEncoder(w).Encode(product)
+	writeJSON(w, http.StatusCreated, product)
 }
 
 func UpdateProduct(w http.ResponseWriter, r *http.Request) {
@@ -158,9 +152,8 @@ func UpdateProduct(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusOK)
-	json.NewEncoder(w).Encode(productUpdate)
+	writeJSON(w, http.StatusCreated, productUpdate)
+
 }
 
 func DeleteProduct(w http.ResponseWriter, r *http.Request) {
@@ -190,8 +183,6 @@ func DeleteProduct(w http.ResponseWriter, r *http.Request) {
 		Message: "user deleted successfully",
 	}
 
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusOK)
-	json.NewEncoder(w).Encode(response)
+	writeJSON(w, http.StatusOK, response)
 
 }

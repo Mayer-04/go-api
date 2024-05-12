@@ -3,7 +3,7 @@ package routes
 import (
 	"net/http"
 
-	"github.com/Mayer-04/mongo-api-go/internal/handler"
+	handler "github.com/Mayer-04/mongo-api-go/internal/handlers"
 )
 
 func SetupRoutes(server *http.ServeMux) {
